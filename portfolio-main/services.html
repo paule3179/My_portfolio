@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services offered by Emmanuel Wumpini - Full-Stack Developer. Specializing in Web Development, Backend Systems, and School Management Solutions.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="paul.css">
+    <title>Services | Wumpini</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="paul.html" class="logo"><span>Khord</span>son</a>
+
+        <button class="menu-btn" id="menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="navbar" id="navbar">
+            <a href="paul.html"><i class="fas fa-home"></i> Home</a>
+            <a href="services.html" class="active"><i class="fas fa-cogs"></i> Services</a>
+            <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a> 
+        </nav>
+        
+        <a href="paul.html#contact-form" class="btn contact-btn">Contact Me</a>
+    </header>
+
+    <!-- PAGE HERO (Smaller than homepage) -->
+    <section class="page-hero">
+        <h3>My Services</h3>
+        <h1>What I <span>Offer</span></h1>
+        <p>As a full-stack developer, I provide end-to-end solutions to help bring your ideas to life, from database architecture to pixel-perfect user interfaces.</p>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section">
+        <div class="services-grid">
+            
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Building responsive, high-performance, and dynamic websites using modern technologies like React, JavaScript, HTML, and CSS.</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Backend & APIs</h3>
+                <p>Creating robust server-side applications, secure RESTful APIs, and managing databases using Node.js, Express, MongoDB, and PostgreSQL.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Designing user-friendly, intuitive interfaces and wireframes using Figma, ensuring a seamless and aesthetically pleasing user experience.</p>
+            </div>
+
+            <!-- Service 4 (Your Flagship Project) -->
+            <div class="service-card highlight-card">
+                <div class="service-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <h3>School Management Systems</h3>
+                <p>Custom, production-ready educational platforms. Featuring role-based dashboards (Admin, Teacher, Parent), automated grading, attendance tracking, and secure fee management.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-content">
+            <ul class="list">
+                <li><a href="paul.html#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="paul.html#contact-form"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            
+            <div class="social">
+                <a href="https://github.com/paule3179/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/emmanuelwumpini/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:paule3179@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+233546048573" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
+        
+        <p class="copyright">&copy; 2024 Wumpini. All Rights Reserved.</p>
+    </footer>
+
+    <!-- SCRIPT FOR MOBILE MENU TOGGLE -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navbar = document.getElementById('navbar');
+        const menuIcon = menuBtn.querySelector('i');
+
+        menuBtn.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            if (navbar.classList.contains('active')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
