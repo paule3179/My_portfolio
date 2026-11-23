@@ -306,23 +306,24 @@ span {
     align-items: center;
 }
 
-..list {
+.list {
     display: flex;
-    gap: 20px; /* Reduced gap from 30px to bring them closer */
+    gap: 15px; /* Tighter gap */
     margin-bottom: 30px;
-    flex-wrap: nowrap; /* Forces them to stay in one row */
-    justify-content: center; /* Centers the whole row */
+    flex-wrap: nowrap; /* FORCE single row */
+    justify-content: center;
     width: 100%;
+    padding: 0 10px; /* Slight padding so it doesn't touch screen edges */
 }
 
 .list a {
     color: var(--text-light);
-    font-size: 14px; /* Reduced from 16px to make them fit better */
+    font-size: 13px; /* Smaller font size to fit all 4 items */
     display: flex;
     align-items: center;
-    gap: 6px; /* Slightly reduced icon-text gap */
+    gap: 5px; /* Small gap between icon and text */
     transition: var(--transition);
-    white-space: nowrap; /* Prevents text from breaking into two lines */
+    white-space: nowrap; /* Prevent text from breaking */
 }
 
 .list a:hover {
@@ -331,21 +332,25 @@ span {
 
 .social {
     display: flex;
-    gap: 15px;
+    gap: 15px; /* Tighter gap for mobile fitting */
     margin-bottom: 30px;
+    flex-wrap: nowrap; /* Forces icons to stay in one row */
+    justify-content: center; /* Centers the row of icons */
+    width: 100%;
 }
 
 .social a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 36px; /* Slightly reduced from 40px */
+    height: 36px; /* Slightly reduced from 40px */
     background: rgba(255, 255, 255, 0.1);
     color: white;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 16px; /* Slightly reduced icon size */
     transition: var(--transition);
+    flex-shrink: 0; /* Prevents the browser from squishing them into ovals */
 }
 
 .social a:hover {
@@ -523,10 +528,16 @@ span {
     }
 
     .navbar a {
-        justify-content: center;
-        padding: 12px;
-        font-size: 16px;
-    }
+    font-size: 15px;  
+    color: var(--text-light);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: var(--transition);
+}
 
     /* 5. Adjust the contact button for mobile */
     .contact-btn {
