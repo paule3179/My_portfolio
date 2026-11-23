@@ -306,21 +306,23 @@ span {
     align-items: center;
 }
 
-.list {
+..list {
     display: flex;
-    gap: 30px;
+    gap: 20px; /* Reduced gap from 30px to bring them closer */
     margin-bottom: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap; /* Forces them to stay in one row */
+    justify-content: center; /* Centers the whole row */
+    width: 100%;
 }
 
 .list a {
     color: var(--text-light);
-    font-size: 16px;
+    font-size: 14px; /* Reduced from 16px to make them fit better */
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px; /* Slightly reduced icon-text gap */
     transition: var(--transition);
+    white-space: nowrap; /* Prevents text from breaking into two lines */
 }
 
 .list a:hover {
